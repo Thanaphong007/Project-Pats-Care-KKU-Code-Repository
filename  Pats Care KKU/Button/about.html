@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Map</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: bisque;
+        }
+        #map {
+            height: auto;
+            width: 100%;
+        }
+        header {
+            padding: 10px 0;
+            text-align: left;
+        }
+        i.fas.fa-home {
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <ul><a href="/ Pats Care KKU.html"><i class="fas fa-home"></i></a></ul>
+            </ul>
+        </nav>
+    </header>
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            var location = { lat: 51.5074, lng: -0.1278 };
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: location,
+                zoom: 15
+            });
+
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: 'Marker Title'
+            });
+        }
+    </script>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.064928373565!2d102.820928974848!3d16.47224968426719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31228a8be5184eb5%3A0x7316d55af70bec92!2z4LiV4Li24LiB4LmA4Lie4Li14Lii4Lij4Lin4Li04LiI4Li04LiV4LijIOC4hOC4k-C4sOC4p-C4tOC4qOC4p-C4geC4o-C4o-C4oeC4qOC4suC4quC4leC4o-C5jCDguKHguKvguLLguKfguLTguJfguKLguLLguKXguLHguKLguILguK3guJnguYHguIHguYjguJk!5e0!3m2!1sth!2sth!4v1695712753266!5m2!1sth!2sth" width="1400" height="770" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</body>
+</html>
+
